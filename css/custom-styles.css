@@ -1,0 +1,41 @@
+/* LAB 6: Brand-only CSS. Layout/responsiveness uses Tailwind utility classes. */
+:root { --brand-primary:#af5a2d; --brand-dark:#20293a; --brand-surface:#f6f7f0; --brand-radius:18px; }
+html { scroll-behavior:smooth; scroll-padding-top:96px; }
+body { margin:0; background:var(--brand-surface); color:#26303a; font-family:Inter,system-ui,sans-serif; line-height:1.6; }
+button, input, select, textarea { font:inherit; }
+button, summary { cursor:pointer; }
+.skip-link { position:absolute; z-index:100; left:10px; top:-100px; padding:12px; background:white; }
+.skip-link:focus { top:10px; }
+.menu-toggle span { display:block; width:24px; height:2px; margin:3px; background:var(--brand-dark); border-radius:2px; }
+.mobile-nav[hidden] { display:none !important; }
+.hero { background:linear-gradient(110deg,#20293a 3%,#2d3643 62%,#5f655d); }
+.hero-copy>p { max-width:560px; color:#e3e7e8; margin-bottom:22px; }
+.hero-note { margin-top:24px; font-size:.78rem; }
+.about-grid>div>p { color:#d6dce2; }
+.stay-form label, .contact-card form>label { display:grid; gap:7px; font-weight:600; font-size:.9rem; }
+.stay-form .radio-row, .check-label { display:flex; flex-wrap:wrap; align-items:center; gap:16px; }
+.stay-form .radio-row label { display:flex; align-items:center; gap:8px; }
+.stay-form fieldset { border:0; padding:0; margin-bottom:20px; }
+.stay-form legend { font-weight:700; margin-bottom:12px; }
+.check-label { margin:20px 0; }
+.summary-card dl div { display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid #dce6d9; padding:12px 0; }
+.summary-card dd { margin:0; font-weight:700; }
+.total-row { display:flex; justify-content:space-between; gap:12px; margin:20px 0; font-weight:700; }
+.total-row strong { font-size:1.75rem; color:var(--brand-primary); }
+.contact-card form { display:grid; gap:16px; }
+.faq details { border-bottom:1px solid #cdd6c9; padding:18px 0; }
+.faq summary { display:flex; justify-content:space-between; gap:16px; font-weight:700; }
+.faq summary::after { content:'+'; color:var(--brand-primary); }
+.faq details[open] summary::after { content:'−'; }
+.faq details p { padding-top:12px; color:#64716b; }
+.feature-icon { color:var(--brand-primary); }
+.small-muted { font-size:.78rem; color:#64716b; }
+.room-body p { flex:1; color:#64716b; }
+.room-body .button { width:100%; }
+.stars { letter-spacing:3px; color:#d67b45; }
+.review-author { font-size:.85rem; font-weight:700; }
+.logo-mark { display:grid; place-items:center; width:34px; height:34px; border-radius:50%; background:#dcebd6; font-size:25px; }
+.footer-grid h2 { font-size:1rem; }
+.footer-grid p, .footer-grid span { color:#aab8c9; font-size:.88rem; }
+.footer-grid a:not(.logo) { color:#cbd5e1; }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; animation:none!important; } }
