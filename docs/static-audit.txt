@@ -1,0 +1,11 @@
+Static audit of local files (not an online browser validation):
+one_h1: True
+one_main: True
+video: True
+iframes: True
+images_alt: True
+iframe_title: True
+local_paths_ok: True
+internal_links_ok: True
+js_syntax: True
+W3C/DevTools/Lighthouse/Netlify: not performed.
