@@ -39,3 +39,13 @@ button, summary { cursor:pointer; }
 .footer-grid p, .footer-grid span { color:#aab8c9; font-size:.88rem; }
 .footer-grid a:not(.logo) { color:#cbd5e1; }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; animation:none!important; } }
+
+/* LAB 9: branding-only form styles. Layout uses Tailwind utility classes. */
+.feedback-input { display:block; width:100%; min-height:48px; border:1.5px solid #cbd5d1; border-radius:14px; padding:12px 14px; background:#fff; color:#20293a; transition:border-color .16s, box-shadow .16s; }
+.feedback-input:focus-visible { outline:2px solid #af5a2d; outline-offset:2px; }
+.feedback-input.is-error { border-color:#b91c1c; box-shadow:0 0 0 2px rgba(185,28,28,.09); }
+.feedback-input.is-valid { border-color:#15803d; }
+.feedback-error { min-height:1.15rem; margin-top:5px; font-size:.8rem; font-weight:600; color:#b91c1c; }
+#agreement.is-error { outline:2px solid #b91c1c; outline-offset:3px; }
+#agreement.is-valid { outline:2px solid #15803d; outline-offset:2px; }
+#success-modal:not([hidden]) {display:flex;}

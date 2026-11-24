@@ -39,19 +39,7 @@ function updateTotal(){
 }
 arrival.addEventListener('change', () => {departure.min = arrival.value;updateTotal()});
 form.addEventListener('change',updateTotal); updateTotal();
-const contactForm=document.querySelector('#contact-form');
-contactForm.addEventListener('submit',event=>{
-  event.preventDefault();
-  if(!contactForm.reportValidity())return;
-  const name=contactForm.elements.name.value.trim();
-  const channel=contactForm.elements.contact.value.trim();
-  const message=contactForm.elements.message.value.trim();
-  const subject=encodeURIComponent('Запит до Готелю Лапка');
-  const body=encodeURIComponent(`Ім'я: ${name}\nКонтакт: ${channel}\n\n${message}`);
-  // Recipient intentionally left unspecified: the project did not provide a verified hotel email.
-  document.querySelector('#form-status').textContent='Відкриваємо поштову програму. Додайте адресу одержувача перед надсиланням.';
-  window.location.href=`mailto:?subject=${subject}&body=${body}`;
-});
+// LAB 9: contact form validation and demonstration modal live in js/validation.js.
 
 // LAB 7: third-party dynamic weather widget; network failure is handled gracefully.
 const weatherTemp = document.querySelector('#weather-temp');
